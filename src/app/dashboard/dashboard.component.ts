@@ -21,4 +21,8 @@ export class DashboardComponent {
       this.router.navigate(['promedio'], {relativeTo: this.route});
     }
 
+    irPaginaLista(): void{
+      this.router.navigate(['lista'], {relativeTo: this.route});
+    }
+
 }

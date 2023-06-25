@@ -18,7 +18,7 @@ resultado=""
   calcular(){
     
     this.promedio.prm= ((Number(this.promedio.numero1) + Number(this.promedio.numero1) + Number(this.promedio.numero1)) / 3)
-    this.resultado = "Su promedio es" + this.promedio.prm
+    this.resultado = "Su promedio es  :" + this.promedio.prm
 
   }
 

@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ListaComponent } from './dashboard/lista/lista.component';
+import { ServiceComponent } from './service/service.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     DashboardComponent,
     HomeComponent,
     PromedioComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ListaComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,
