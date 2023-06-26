@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DAWII_CL3_MARCO_ARANDA';
+  constructor(private router:Router){}
+  Listar(){this.router.navigate(['listar'])}
 }

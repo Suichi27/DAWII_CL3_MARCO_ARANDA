@@ -10,8 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ListaComponent } from './dashboard/lista/lista.component';
-import { ServiceComponent } from './service/service.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ListaHabitacionComponent } from './dashboard/lista/lista-habitacion/lista-habitacion.component';
+
 
 @NgModule({
   declarations: [
@@ -20,8 +21,7 @@ import { ServiceComponent } from './service/service.component';
     HomeComponent,
     PromedioComponent,
     PageNotFoundComponent,
-    ListaComponent,
-    ServiceComponent
+    ListaHabitacionComponent
   ],
   imports: [
     BrowserModule,
@@ -32,14 +32,16 @@ import { ServiceComponent } from './service/service.component';
       {path: 'dashboard',component:DashboardComponent,
       children:[
         {path: 'home',component:HomeComponent},
-        {path:'promedio',component:PromedioComponent}
+        {path:'promedio',component:PromedioComponent},
+        {path:'lista',component:ListaHabitacionComponent}
       ]
     },
       {path:'', redirectTo: 'dashboard',pathMatch:'full'},
       {path:'**',component: PageNotFoundComponent}
-    ])
+    ]),
+    HttpClientModule
+
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
